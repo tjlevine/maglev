@@ -98,7 +98,7 @@ apply_theme() {
 
     window_status_fg=colour8 # gray
     window_status_bg=colour0 # dark gray
-    window_status_format="#[fg=$window_status_fg,bg=$window_status_bg] #I $left_separator #[fg=$window_status_fg,bg=$window_status_bg] #W "
+    window_status_format="#[fg=$window_status_fg,bg=$window_status_bg] #I $left_separator #[fg=$window_status_fg,bg=$window_status_bg]#W"
     tmux setw -g window-status-format "$window_status_format"
 
     window_status_current_fg=colour16 # black
@@ -109,7 +109,7 @@ apply_theme() {
 
     window_status_activity_fg=default
     window_status_activity_bg=default
-    window_status_activity_attr=underscore
+    window_status_activity_attr=bold
     tmux setw -g window-status-activity-style fg=$window_status_activity_fg,bg=$window_status_activity_bg,$window_status_activity_attr
 
     window_status_bell_fg=colour11 # yellow
